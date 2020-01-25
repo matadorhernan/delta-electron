@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<section
+  class="loading"
+  *ngIf="loading"
+  [ngClass]="{ 'load-ready': loadReady }"
+>
+  <div class="courtain-wrap" [ngClass]="{ 'load-ready': loadReady }">
+    <div class="courtain"></div>
+    <div class="courtain"></div>
+    <div class="courtain"></div>
+    <div class="courtain"></div>
+    <div class="courtain"></div>
+  </div>
+  <img src="./assets/brand/vertical.svg" />
+  <div class="bar">
+    <div class="loader-bar"></div>
+  </div>
+</section>
+<object data="https://delta.cuadrosoft.com" (load)="handleLoad()"> </object>
