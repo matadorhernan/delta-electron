@@ -1,0 +1,32 @@
+directories:
+  output: release/
+  buildResources: build
+productName: delta-electron
+appId: com.cuadrosoft.delta
+files:
+  - filter:
+      - '**/*'
+      - dist
+      - '!**/*.ts'
+      - '!*.code-workspace'
+      - '!LICENSE.md'
+      - '!package.json'
+      - '!package-lock.json'
+      - '!src/'
+      - '!e2e/'
+      - '!hooks/'
+      - '!angular.json'
+      - '!_config.yml'
+      - '!karma.conf.js'
+      - '!tsconfig.json'
+      - '!tslint.json'
+win:
+  target:
+    - portable
+mac:
+  target:
+    - dmg
+linux:
+  target:
+    - AppImage
+electronVersion: 7.1.7
